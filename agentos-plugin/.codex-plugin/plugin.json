@@ -6,16 +6,19 @@
       "Say hello to AgentOS; a greeting alone gets a short reply without delegation.",
       "Route my task to the right AgentOS specialist roles and complete it with verification.",
       "Plan a dependency graph, delegate independent work when native agents are available, and recover failed nodes with bounded retries.",
-      "Inspect AgentOS skills, lifecycle hooks, capability routing, and workflow policies."
+      "Inspect AgentOS skills, lifecycle hooks, capability routing, and workflow policies.",
+      "Create a cinematic talking video from my portrait, speech, and motion references using the talking-video specialist.",
+      "Install media tools in an isolated workspace and create a complete inventory and uninstall guide.",
+      "Give me a video requirement; choose the best available tool, create the prompt, perform the edit or generation, and review the result."
     ],
     "developerName": "Ketan rawal",
     "displayName": "AgentOS",
-    "longDescription": "A private ChatGPT plugin for greetings, specialist workflow skills, live tool discovery, dependency-based plans, evaluation, and safe improvement. A greeting-only message gets an AgentOS reply without delegating or calling tools. Specialist role profiles are reusable instructions; separate parallel workers require native subagent support from the active ChatGPT host. Optional lifecycle hooks run only in compatible runtimes that execute and trust plugin scripts. No external MCP service or standalone agent runtime is included.",
+    "longDescription": "A private ChatGPT plugin for greetings, specialist workflow skills, including talking-video production, live tool discovery, dependency-based plans, evaluation, and safe improvement. A greeting-only message gets an AgentOS reply without delegating or calling tools. Specialist role profiles are reusable instructions; separate parallel workers require native subagent support from the active ChatGPT host. Optional lifecycle hooks run only in compatible runtimes that execute and trust plugin scripts. No external MCP service or standalone agent runtime is included. Includes a requirement-first video editor workflow that creates internal prompts, performs edits, and checks the actual output.",
     "shortDescription": "ChatGPT workflow orchestration and specialist roles"
   },
   "hooks": "./hooks/hooks.json",
   "name": "agentos",
-  "version": "0.3.2",
+  "version": "0.3.4",
   "description": "A private ChatGPT workflow plugin with specialist role skills, live capability routing, bounded agentic workflows, evaluation, and governed improvement.",
   "author": {
     "name": "Ketan rawal"
@@ -27,8 +30,13 @@
     "tool routing",
     "workflow",
     "evaluation",
-    "lifecycle hooks"
+    "lifecycle hooks",
+    "talking video",
+    "video generation",
+    "install inventory",
+    "video editing",
+    "video editor",
+    "prompt-to-production"
   ],
   "skills": "./skills"
 }
-

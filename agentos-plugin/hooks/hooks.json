@@ -1,20 +1,148 @@
 {
-  "description": "AgentOS lifecycle context for compatible ChatGPT Work and Codex runtimes. Hooks are advisory and do not store conversation content.",
+  "description": "AgentOS lifecycle context for compatible ChatGPT Work and Codex runtimes. User-prompt and tool-result hooks reinforce outcome-first planning and bounded verification. Hooks are advisory and do not store conversation content.",
   "hooks": {
-    "SessionStart": [{"hooks": [{"type": "command", "command": "python3 ${PLUGIN_ROOT}/hooks/agentos_hook.py", "statusMessage": "Loading AgentOS workflow guidance"}]}],
-    "UserPromptSubmit": [{"hooks": [{"type": "command", "command": "python3 ${PLUGIN_ROOT}/hooks/agentos_hook.py"}]}],
-    "PreToolUse": [{"hooks": [{"type": "command", "command": "python3 ${PLUGIN_ROOT}/hooks/agentos_hook.py"}]}],
-    "PermissionRequest": [{"hooks": [{"type": "command", "command": "python3 ${PLUGIN_ROOT}/hooks/agentos_hook.py"}]}],
-    "PostToolUse": [{"hooks": [{"type": "command", "command": "python3 ${PLUGIN_ROOT}/hooks/agentos_hook.py"}]}],
-    "PreModelRequest": [{"hooks": [{"type": "command", "command": "python3 ${PLUGIN_ROOT}/hooks/agentos_hook.py"}]}],
-    "PostModelRequest": [{"hooks": [{"type": "command", "command": "python3 ${PLUGIN_ROOT}/hooks/agentos_hook.py"}]}],
-    "PreCompact": [{"hooks": [{"type": "command", "command": "python3 ${PLUGIN_ROOT}/hooks/agentos_hook.py"}]}],
-    "PostCompact": [{"hooks": [{"type": "command", "command": "python3 ${PLUGIN_ROOT}/hooks/agentos_hook.py"}]}],
-    "SubagentStart": [{"hooks": [{"type": "command", "command": "python3 ${PLUGIN_ROOT}/hooks/agentos_hook.py"}]}],
-    "SubagentStop": [{"hooks": [{"type": "command", "command": "python3 ${PLUGIN_ROOT}/hooks/agentos_hook.py"}]}],
-    "Stop": [{"hooks": [{"type": "command", "command": "python3 ${PLUGIN_ROOT}/hooks/agentos_hook.py"}]}],
-    "Interrupt": [{"hooks": [{"type": "command", "command": "python3 ${PLUGIN_ROOT}/hooks/agentos_hook.py"}]}],
-    "SessionEnd": [{"hooks": [{"type": "command", "command": "python3 ${PLUGIN_ROOT}/hooks/agentos_hook.py", "statusMessage": "Closing AgentOS session context"}]}]
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 ${PLUGIN_ROOT}/hooks/agentos_hook.py",
+            "statusMessage": "Loading AgentOS workflow guidance"
+          }
+        ]
+      }
+    ],
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 ${PLUGIN_ROOT}/hooks/agentos_hook.py",
+            "statusMessage": "Analyzing the requested outcome"
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 ${PLUGIN_ROOT}/hooks/agentos_hook.py"
+          }
+        ]
+      }
+    ],
+    "PermissionRequest": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 ${PLUGIN_ROOT}/hooks/agentos_hook.py"
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 ${PLUGIN_ROOT}/hooks/agentos_hook.py"
+          }
+        ]
+      }
+    ],
+    "PreModelRequest": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 ${PLUGIN_ROOT}/hooks/agentos_hook.py"
+          }
+        ]
+      }
+    ],
+    "PostModelRequest": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 ${PLUGIN_ROOT}/hooks/agentos_hook.py"
+          }
+        ]
+      }
+    ],
+    "PreCompact": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 ${PLUGIN_ROOT}/hooks/agentos_hook.py"
+          }
+        ]
+      }
+    ],
+    "PostCompact": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 ${PLUGIN_ROOT}/hooks/agentos_hook.py"
+          }
+        ]
+      }
+    ],
+    "SubagentStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 ${PLUGIN_ROOT}/hooks/agentos_hook.py"
+          }
+        ]
+      }
+    ],
+    "SubagentStop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 ${PLUGIN_ROOT}/hooks/agentos_hook.py"
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 ${PLUGIN_ROOT}/hooks/agentos_hook.py"
+          }
+        ]
+      }
+    ],
+    "Interrupt": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 ${PLUGIN_ROOT}/hooks/agentos_hook.py"
+          }
+        ]
+      }
+    ],
+    "SessionEnd": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 ${PLUGIN_ROOT}/hooks/agentos_hook.py",
+            "statusMessage": "Closing AgentOS session context"
+          }
+        ]
+      }
+    ]
   }
 }
-

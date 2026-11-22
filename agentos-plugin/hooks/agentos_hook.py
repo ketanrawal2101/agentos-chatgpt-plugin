@@ -13,25 +13,30 @@ import sys
 
 CONTEXT = {
     "SessionStart": (
-        "AgentOS is a workflow skill package. Inspect current tools and permissions. "
-        "Treat specialist profiles as instructions; claim separate agents only when "
-        "the host actually exposes and runs subagents. Keep retries bounded."
+        "Treat the user's message as a desired outcome. Inspect available tools, connected "
+        "apps, permissions, and relevant skills. Choose only roles and agents the host actually supports."
     ),
     "UserPromptSubmit": (
-        "Use AgentOS intake and tool discovery for this request. Build a dependency "
-        "graph when useful, honor the user's stated constraints, and verify before reporting."
+        "Analyze the requested outcome and constraints. Discover current tools, honor any app "
+        "the user named, and create an internal task-specific prompt and acceptance checks. "
+        "Perform the requested work when suitable tools are available; ask only for a blocking "
+        "missing detail or a required action-time approval."
     ),
     "PreToolUse": (
         "Before this tool call, check its declared schema, target, authorization, and "
         "side effects. Preserve the host's approval flow; do not repeat uncertain writes."
     ),
     "PostToolUse": (
-        "Inspect the actual tool result against the node's success check. Verify important "
-        "side effects independently and check state before retrying an uncertain write."
+        "Observe the actual result and compare it with the success checks. Repair only the "
+        "smallest failing step in a bounded loop; before repeating an uncertain external write, inspect state."
     ),
     "SubagentStart": (
         "Work only on the assigned specialist scope. Return a concise result with "
         "evidence, uncertainty, and blockers. Avoid overlapping writes and unapproved side effects."
+    ),
+    "Stop": (
+        "Before ending, check that the requested task was performed and its acceptance checks "
+        "have evidence. Save or link the deliverable and report what is complete versus unverified."
     ),
 }
 
@@ -58,4 +63,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-

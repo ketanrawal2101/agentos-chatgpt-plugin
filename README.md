@@ -6,11 +6,12 @@ AgentOS helps ChatGPT coordinate complex requests using reusable instructions, c
 
 ## What it includes
 
-- **20 reusable skills** for orchestration, tool discovery, specialist work, workflow planning, quality review, and learning.
+- **22 reusable skills** for orchestration, tool discovery, specialist work, workflow planning, quality review, learning, and video production.
 - **A greeting-only skill** designed to keep a simple hello brief. For explicit routing, mention **@AgentOS**; ChatGPT still controls automatic skill selection.
+- **Requirement-first video editing**: AgentOS can infer a production prompt from a requested outcome, choose from currently available tools, perform the edit, inspect the result, and make bounded repairs.
 - **Workflow guidance** that maps multi-step work into dependencies, allows parallel steps when the host supports them, and uses bounded repair loops.
 - **Lifecycle hook definitions** for compatible runtimes. Hooks are advisory and do not replace host approval or security controls.
-- **Nine custom agent profiles** for GitHub Copilot and compatible VS Code workflows, stored in [.github/agents/](./.github/agents/). These profiles are separate from the ChatGPT plugin skills.
+- **Ten custom agent profiles** for GitHub Copilot and compatible VS Code workflows, stored in [.github/agents/](./.github/agents/). These profiles are separate from the ChatGPT plugin skills.
 
 ## Use with ChatGPT
 
@@ -26,7 +27,7 @@ Repository custom agents are in [.github/agents/](./.github/agents/). See the [d
 
 ## Privacy and integrations
 
-AgentOS uses the tools and connected apps already available in the active ChatGPT conversation. It does not include a remote MCP server or external agent service. Its hooks do not retain prompts, transcripts, tool arguments, tool results, or credentials.
+AgentOS uses the tools and connected apps already available in the active ChatGPT conversation. It does not include a remote MCP server or external agent service. Its hooks do not retain prompts, transcripts, tool arguments, tool results, or credentials. Workflow skill updates improve instructions; they do not train model weights.
 
 ## License
 

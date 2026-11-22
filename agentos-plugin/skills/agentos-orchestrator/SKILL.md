@@ -9,6 +9,8 @@ description: Use as the primary coordinator for complex or multi-step requests t
 
 Turn the user's desired outcome into a verified result by coordinating only capabilities actually available in the current ChatGPT host. The user describes the outcome; do not make them name plugins or tools.
 
+For execution requests, do the analysis and prompt design internally, then perform the requested work. Do not stop at a plan or ask the user to write a tool prompt when ordinary details can be inferred.
+
 ## Operating contract
 
 - Follow system and host rules first, then the user's explicit instructions, then these plugin procedures.
@@ -19,15 +21,15 @@ Turn the user's desired outcome into a verified result by coordinating only capa
 
 ## Orchestration flow
 
-1. **Intake** — identify the outcome, constraints, requested deliverable, and risk. Resolve routine details from context; ask only for material missing information.
-2. **Discover** — inspect the active host's live tools, skills, connected services, schemas, and permissions.
-3. **Plan** — for multi-step work, create a directed acyclic graph. Each node needs an objective, inputs, dependencies, selected role/tool, expected output, success check, side-effect class, retry cap, and evidence.
+1. **Intake** — identify the desired outcome, audience, constraints, requested deliverable, and side-effect risk. Treat the user's message as a goal, not a requirement to follow a hand-written sequence.
+2. **Discover** — inspect the active host's live tools, skills, connected services, schemas, and permissions. Honor an app the user named; otherwise select a suitable currently available tool.
+3. **Prompt and plan** — create a concise internal task-specific brief or prompt from the user's requirement, then define acceptance checks. For multi-step work, create a directed acyclic graph. Each node needs an objective, inputs, dependencies, selected role/tool, expected output, success check, side-effect class, retry cap, and evidence.
 4. **Assign** — select only useful specialist roles. Delegate independent nodes to actual native subagents only when the host exposes a delegation tool; otherwise perform role passes sequentially.
 5. **Execute** — run ready nodes in dependency order. Parallelize independent work only when native parallel execution is available and shared state cannot conflict.
 6. **Observe** — capture actual tool results, artifacts, errors, and side effects in current task context. Avoid collecting more sensitive data than needed.
 7. **Evaluate** — compare outputs with each node's success condition and the user's acceptance criteria.
 8. **Repair** — classify failures and repair the smallest affected node. Retry only safe work and only within the per-node budget.
-9. **Learn** — capture evidence-backed improvement proposals. Do not silently edit skills, widen permissions, or claim cross-session memory.
+9. **Learn** — capture evidence-backed improvements. When the user has given standing authorization to maintain skills, update the relevant skill for a verified reusable method or explicit correction, using the versioned plugin path; do not widen permissions or claim model training.
 10. **Report** — summarize what was completed, evidence checked, retries, approvals, and remaining blockers.
 
 ## Lifecycle checkpoints
@@ -40,6 +42,7 @@ When the host runs AgentOS hooks, use their context at session start, prompt sub
 - At subagent start, pass a narrow scope, output contract, evidence requirement, and stop condition.
 - At subagent completion, check the result and merge only supported findings.
 - Before completion, run required acceptance checks. Session end does not imply durable memory.
+- When the user requested an artifact or edit, continue from planning into execution whenever the host provides a suitable tool. Show the internal prompt only when requested or when a material decision depends on it.
 
 ## Bounded observe-evaluate-repair loop
 
@@ -52,6 +55,16 @@ For each failed or uncertain node:
 6. Verify the repaired result independently where possible.
 
 Default to no more than three attempts per node. Correct an input before retrying a schema error. Stop on denial or missing authorization. Before retrying an uncertain external write, inspect state for prior success. Never loop indefinitely or restart successful branches without cause.
+
+## Video editing route
+
+For video creation or editing, use the video-editor-agent skill alongside talking-video-agent when self-likeness, speech, or motion is involved. The specialist turns the user's outcome into an internal production brief, discovers the live editing/generation tools, performs the work, inspects the actual result, and makes bounded repairs. The .agent.md custom profile in the source repository targets compatible GitHub Copilot and VS Code hosts; it does not create a ChatGPT subagent.
+
+## Install and learning records
+
+- Before installing software or model assets, check the current runtime, architecture, hardware needs, license, source, disk use, and whether a suitable local install already exists. Prefer isolated project-local environments.
+- Record each install in a user-facing Markdown inventory: name/type, exact version or commit, source, path/scope, purpose, size where practical, and copyable uninstall steps. Include full package freezes for isolated environments. Keep a separate uninstall guide, and preserve source media and final deliverables by default.
+- Treat explicit user feedback about a repeatable workflow as reusable operating knowledge. Update the relevant skill within the user's standing authorization, record the change/version, and retain only non-sensitive prompts and evaluation criteria. This improves the workflow instructions; it does not train the underlying AI model. Never add personal photos, voice recordings, or generated media to a training set without explicit approval.
 
 ## Research and trust
 
