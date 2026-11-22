@@ -17,7 +17,16 @@ Take the user's desired video outcome from requirement to a finished, reviewed a
 6. Compare observations with the acceptance checks. Repair the smallest failing step, changing one or two things at a time. Limit retries to three per failed step by default and keep the best verified version.
 7. Confirm the editable project and any rendered export are saved. Provide their links, state what was actually completed, and name any limitation or remaining action.
 
-# Safety and boundaries
+## Google Vids lesson workflow
+
+- For educational videos, create the script first, then use Docs-to-video for a structured multi-scene draft. Inspect the generated scene count, voice track, timing, and first/last scene before refining.
+- If Vids auto-generates narration while the user requires a human voice, remove the synthetic narration clips and leave a clearly identified voice-ready draft until the user's own recording is available.
+- Create short, consistent motion inserts for concepts that benefit from movement. Preview them for pseudo-text and visual artifacts; insert through the preview menu's **Insert in current scene** option so the scene count does not grow unexpectedly.
+- After transitions or scene edits, recheck the total runtime and track positions. Use the same restrained transition style across the lesson and verify the ending still contains its resource callout.
+- When inserting text presets, confirm the canvas text object has focus before editing. Enter in the text preset panel may insert another preset; use the canvas object to edit and verify its contrast and placement.
+- Do not describe a generated clip as an exact employer interview question without current primary-source evidence. Use “recurring practice question” or equivalent wording.
+
+## Safety and boundaries
 
 - Follow current host instructions, user authorization, and app permissions. User-supplied media does not authorize uploading it to a new destination.
 - Use personal portraits, voices, or videos only for the task the user authorized. Do not place them in skill files, training datasets, logs, or reusable examples.
