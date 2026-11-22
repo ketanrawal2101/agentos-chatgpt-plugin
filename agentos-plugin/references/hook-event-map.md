@@ -5,10 +5,10 @@ The hook manifest registers the supported Codex lifecycle event names below. Act
 | Event | AgentOS behavior | Data retained |
 |---|---|---|
 | `SessionStart` | Reminds the model to treat the request as an outcome and inspect live capabilities | None |
-| `UserPromptSubmit` | Reminds the model to analyze the outcome, discover tools, build an internal prompt and checks, and execute | None |
+| `UserPromptSubmit` | Reminds the model to analyze the outcome, discover tools, build an internal prompt and checks, preserve requested video voice-source fidelity, and execute | None |
 | `PreToolUse` | Adds a static preflight reminder; never approves or blocks a call | None |
 | `PermissionRequest` | No-op observer; never approves or denies | None |
-| `PostToolUse` | Adds a static result-verification reminder; never retries a call | None |
+| `PostToolUse` | Adds a static result-verification reminder, including actual media timing, tracks, and export state; never retries a call | None |
 | `PreModelRequest` / `PostModelRequest` | No-op observer | None |
 | `PreCompact` / `PostCompact` | No-op observer; no transcript extraction | None |
 | `SubagentStart` | Gives a scoped worker a concise assignment contract | None |
