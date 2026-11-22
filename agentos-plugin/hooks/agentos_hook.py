@@ -18,7 +18,7 @@ CONTEXT = {
     ),
     "UserPromptSubmit": (
         "Analyze the requested outcome and constraints. Discover current tools, honor any app "
-        "the user named, and create an internal task-specific prompt and acceptance checks. For educational videos, require spoken explanations by default; honor the requested voice source and never label synthetic speech as human. "
+        "the user named, and create an internal task-specific prompt and acceptance checks. For educational videos, require spoken explanations by default; honor the requested voice source and never label synthetic speech as human. If a generation route is plan-blocked, do not retry it; choose a compatible route only when it still meets the requested outcome. "
         "Perform the requested work when suitable tools are available; ask only for a blocking "
         "missing detail or a required action-time approval."
     ),
