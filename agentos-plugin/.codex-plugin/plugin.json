@@ -1,0 +1,34 @@
+{
+  "interface": {
+    "capabilities": [],
+    "category": "Developer Tools",
+    "defaultPrompt": [
+      "Say hello to AgentOS; a greeting alone gets a short reply without delegation.",
+      "Route my task to the right AgentOS specialist roles and complete it with verification.",
+      "Plan a dependency graph, delegate independent work when native agents are available, and recover failed nodes with bounded retries.",
+      "Inspect AgentOS skills, lifecycle hooks, capability routing, and workflow policies."
+    ],
+    "developerName": "Ketan rawal",
+    "displayName": "AgentOS",
+    "longDescription": "A private ChatGPT plugin for greetings, specialist workflow skills, live tool discovery, dependency-based plans, evaluation, and safe improvement. A greeting-only message gets an AgentOS reply without delegating or calling tools. Specialist role profiles are reusable instructions; separate parallel workers require native subagent support from the active ChatGPT host. Optional lifecycle hooks run only in compatible runtimes that execute and trust plugin scripts. No external MCP service or standalone agent runtime is included.",
+    "shortDescription": "ChatGPT workflow orchestration and specialist roles"
+  },
+  "hooks": "./hooks/hooks.json",
+  "name": "agentos",
+  "version": "0.3.2",
+  "description": "A private ChatGPT workflow plugin with specialist role skills, live capability routing, bounded agentic workflows, evaluation, and governed improvement.",
+  "author": {
+    "name": "Ketan rawal"
+  },
+  "keywords": [
+    "ChatGPT plugin",
+    "agent orchestration",
+    "specialist roles",
+    "tool routing",
+    "workflow",
+    "evaluation",
+    "lifecycle hooks"
+  ],
+  "skills": "./skills"
+}
+
