@@ -2,6 +2,16 @@
 
 For multi-step requests, AgentOS uses a dependency graph so each step has a clear purpose and a verifiable result.
 
+## Requirement-first execution
+
+1. Read the user's requested outcome, constraints, deliverable, and any named app.
+2. Discover current tools, connected apps, skills, schemas, and permissions. Honor a named app; otherwise choose a suitable available tool.
+3. Construct a task-specific internal prompt or production brief and acceptance checks. Do not ask the user to write a prompt or pick a tool when the request is clear.
+4. Perform the requested work when the host exposes a suitable capability.
+5. Observe the actual artifact or app state and evaluate it against the checks.
+6. Repair the smallest failing step within the per-node retry cap, then verify again.
+7. Save and link the completed deliverable; separate completed work from recommendations and unknowns.
+
 ## Node contract
 
 A workflow node should define:
