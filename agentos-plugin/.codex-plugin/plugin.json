@@ -18,7 +18,7 @@
   },
   "hooks": "./hooks/hooks.json",
   "name": "agentos",
-  "version": "0.3.5",
+  "version": "0.3.6",
   "description": "A private ChatGPT workflow plugin with specialist role skills, live capability routing, bounded agentic workflows, evaluation, and governed improvement.",
   "author": {
     "name": "Ketan rawal"
