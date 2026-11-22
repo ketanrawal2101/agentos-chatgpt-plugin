@@ -1,5 +1,10 @@
 # AgentOS version history
 
+## 0.3.7 — 2026-11-22
+
+- Added a no-retry rule for plan-blocked HeyGen routes and a guarded fallback to direct Avatar Video only when it meets the requested outcome.
+- Documented the currently observed 5,000-character direct-avatar script limit.
+
 ## 0.3.6 — 2026-11-22
 
 - Made spoken explanations the default for educational videos; silent/music-only exports are incomplete unless requested.
