@@ -32,6 +32,8 @@ Take the user's desired video outcome from requirement to a finished, reviewed a
 - Honor the requested voice source. Use a supplied human recording when the user asks for a non-AI voice. When the user explicitly authorizes an existing HeyGen personal voice clone, use the matching active private voice and identify the result as AI-generated speech, not a live recording.
 - Check HeyGen's private avatar and voice library before production. Use the selected user-owned digital-twin look ID directly and its matching active voice; do not substitute public assets.
 - Use HeyGen Video Agent for long narration-led lessons that benefit from presenter A-roll plus B-roll. Use Avatar Video when exact script/audio preservation or a fixed presenter shot takes priority.
+- If Video Agent is unavailable on the current plan or in the user's region, do not retry it. Use Avatar Video only if a fixed-background presenter meets the request; otherwise report the route limitation rather than silently changing the result.
+- The direct Avatar Video script field currently caps at 5,000 characters. Check the live limit, shorten the narration or split it into coherent segments, and do not retry an unchanged oversized script.
 - Do not create a new voice clone without explicit consent or claim that source avatar/voice files were downloaded unless the connected service provides and completes that export. Use existing account assets directly when available.
 - Before delivery, verify audible explanations for every question, correct voice source, aligned speech, captions, and a spoken outro. If voice is missing, repair the project before calling it finished.
 
