@@ -9,6 +9,7 @@ Use this as a planning structure, then adapt it to the current tool's prompt fie
 - Aspect ratio, target duration, and resolution:
 - Source assets and permitted use:
 - Exact dialogue or narration:
+- Required voice source (human recording, synthetic voice, or no narration):
 - Identity and reference fidelity:
 - Framing and visible body area:
 - Performance, gestures, and emotion:
@@ -19,7 +20,7 @@ Use this as a planning structure, then adapt it to the current tool's prompt fie
 
 ## Prompt construction
 
-Use only authorized references. State what must remain consistent, what the subject should do, how the camera should move, and how the clip should end. Preserve user-provided dialogue exactly. Name unwanted artifacts only when they relate to the requested result. Match the prompt to features the live tool actually supports.
+Use only authorized references. State what must remain consistent, what the subject should do, how the camera should move, and how the clip should end. Preserve user-provided dialogue exactly. Name unwanted artifacts only when they relate to the requested result. Match the prompt to features the live tool actually supports. For educational or list-based videos, include a fast topic hook, clear section progression, one visual idea per concept, readable captions, and a specific resource or next-step ending. Present employer interview questions as practice themes unless a current primary source verifies the exact question. Preserve the requested voice source; never describe synthetic speech as a human recording.
 
 ## Review loop
 
