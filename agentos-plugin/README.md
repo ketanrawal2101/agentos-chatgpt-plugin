@@ -1,4 +1,4 @@
-# AgentOS v0.3.4 — ChatGPT Workflow Plugin
+# AgentOS v0.3.5 — ChatGPT Workflow Plugin
 
 AgentOS packages orchestration instructions and specialist role skills for ChatGPT. It uses the live tools and connected apps made available by the host.
 
@@ -20,6 +20,7 @@ When a message is only a greeting, the `agentos-greeting` skill answers as Agent
 - talking-video-agent: plan and improve self-likeness talking videos with motion-aware model selection, quality checks, and install/removal records.
 - video-editor-agent: take a user's video requirement through tool selection, internal prompt design, hands-on editing, observed quality review, and bounded repair.
 - references/video-editor-prompt-template.md: structure an internal production prompt and acceptance checklist without asking the user to author it.
+- Google Vids educational-motion workflow: preserve requested voice source, preview motion inserts, verify scene placement and timing, and finish with the requested resource callout.
 - `references/software-install-inventory-template.md`: record every local runtime, package set, model, source, purpose, path, and uninstall command.
 
 ## Specialist role skills
@@ -39,6 +40,7 @@ Research, engineering, quality and security, data analysis, automation, product 
 
 ## Version history
 
+- 0.3.5 (2026-11-22): added verified educational-motion, voice-source fidelity, artifact review, and media export checks.
 - 0.3.4 (2026-11-22): added requirement-first video editing, reusable prompt construction, Google Vids per-track narration checks, and outcome/observe/repair hook context.
 - `0.3.3` (2026-11-22): added the talking-video specialist role, motion-aware video quality workflow, persistent install inventory/uninstall guidance, and user-authorized skill maintenance rules.
 
