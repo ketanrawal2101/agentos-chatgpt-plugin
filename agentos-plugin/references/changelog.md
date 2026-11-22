@@ -1,5 +1,12 @@
 # AgentOS version history
 
+## 0.3.6 — 2026-11-22
+
+- Made spoken explanations the default for educational videos; silent/music-only exports are incomplete unless requested.
+- Added generic HeyGen private-avatar and voice preflight plus narration coverage checks.
+- Kept user-specific channel and asset identifiers out of public source files.
+- Workflow notes do not train model weights.
+
 ## 0.3.5 — 2026-11-22
 
 - Added verified Google Vids educational-motion and voice-source guidance to the video-editor skill and prompt template.
