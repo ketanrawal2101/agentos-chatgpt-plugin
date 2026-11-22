@@ -1,50 +1,30 @@
 # AgentOS
 
-AgentOS is a private ChatGPT plugin for coordinating specialist workflow skills, connected tools, bounded task flows, and verification. This repository contains the complete plugin source package.
+**A private ChatGPT plugin for task routing, specialist skills, and structured workflows.**
 
-- **ChatGPT plugin:** [AgentOS](https://chatgpt.com/plugins/plugins_6b02a9f8fea48191abcd3baafd78bf8f)
-- **Plugin version:** 0.3.2
-- **GitHub repository:** [ketanrawal2101/Ketan-rawal](https://github.com/ketanrawal2101/Ketan-rawal)
-- **ChatGPT visibility:** private. This GitHub repository is public, so its source files are public.
+AgentOS helps ChatGPT coordinate complex requests using reusable instructions, connected tools, bounded work loops, and outcome checks. This repository contains a public source copy of the plugin package. It is not a standalone AI product or hosted agent service.
 
-## Use AgentOS
+## What it includes
 
-For reliable invocation, mention **@AgentOS**. The installed greeting skill is configured so a greeting-only message such as “hello” receives a short AgentOS welcome and stops without delegating, calling tools, or opening connected apps. A greeting that includes a task follows the normal orchestration workflow. ChatGPT controls automatic skill selection, so a plain greeting cannot guarantee exclusive routing across every installed plugin.
+- **20 reusable skills** for orchestration, tool discovery, specialist work, workflow planning, quality review, and learning.
+- **A greeting-only skill** designed to keep a simple hello brief. For explicit routing, mention **@AgentOS**; ChatGPT still controls automatic skill selection.
+- **Workflow guidance** that maps multi-step work into dependencies, allows parallel steps when the host supports them, and uses bounded repair loops.
+- **Lifecycle hook definitions** for compatible runtimes. Hooks are advisory and do not replace host approval or security controls.
 
-## What is included
+## Use with ChatGPT
 
-The plugin contains 20 skills:
+The ChatGPT plugin is private to its owner and is not publicly installable. For dependable use in a conversation, mention **@AgentOS**. A plain greeting cannot guarantee that ChatGPT will select AgentOS over every other installed plugin.
 
-- **Orchestration:** coordinator, agent manager, capability discovery, tool routing, workflow engine, workflow evaluator, approval governance, lifecycle hooks, learning governance, versioning, skill factory, and greeting-only behavior.
-- **Specialist roles:** research, engineering, quality and security, data analysis, automation, product strategy, creative production, and learning evaluation.
-
-Multi-agent behavior is host-dependent. These specialist skills are role instructions; they become separate parallel workers only when the active ChatGPT host exposes native subagent delegation. AgentOS does not claim to spawn workers when that capability is absent.
-
-## Workflow behavior
-
-For multi-step tasks, AgentOS defines a dependency graph with explicit inputs, outputs, and success checks. It can run independent nodes in parallel when the host supports it. Failed nodes use local, bounded repair loops—three attempts per node by default—and successful work is preserved. Consequential actions follow the host's approval flow and are checked before being reported complete.
-
-## Lifecycle hooks
-
-The package declares 14 lifecycle event hooks. Static guidance is added at session start, prompt submission, before and after tool calls, and subagent start. Remaining event handlers are no-ops; they do not change permissions or approvals. Hook scripts retain no prompts, transcripts, tool arguments, tool results, or credentials.
-
-Hooks require a compatible runtime that can execute and trust the bundled scripts. Installing a plugin on ChatGPT web does not deploy hook scripts; supported ChatGPT Work/Codex hosts may run them after trust review. The hooks are advisory and do not replace host security controls.
-
-## Integrations and privacy
-
-AgentOS does not include a remote MCP server or external agent service. It uses only the tools and connected apps already available in the active ChatGPT conversation. No credentials or conversation data are stored by the plugin hooks.
+AgentOS provides specialist role instructions; separate parallel agents are available only when the active host provides native subagent delegation. Hook scripts require a compatible runtime and trust review. Installing the plugin in ChatGPT web does not install or run those scripts.
 
 ## Repository layout
 
-```text
-agentos-plugin/
-├── plugin.json
-├── .codex-plugin/plugin.json
-├── README.md
-├── hooks/
-├── references/
-└── skills/
-```
+The complete plugin package is in [agentos-plugin/](./agentos-plugin/), including its manifests, skills, hook definitions, and references. See the [package README](./agentos-plugin/README.md) for details.
 
-The public source copy omits the author's email address from plugin metadata. No license file is included; add a license before granting others reuse rights.
+## Privacy and integrations
 
+AgentOS uses the tools and connected apps already available in the active ChatGPT conversation. It does not include a remote MCP server or external agent service. Its hooks do not retain prompts, transcripts, tool arguments, tool results, or credentials.
+
+## License
+
+No license is included. Please contact the author before reusing or redistributing this source until a license is added.
