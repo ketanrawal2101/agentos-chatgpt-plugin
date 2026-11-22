@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-11-22 — AgentOS 0.3.5 educational video workflow
+
+- Added Google Vids motion-production lessons, human voice-source fidelity, and scene/timing review to the video-editor skill and agent profile.
+- Updated the existing advisory lifecycle hook script and media-specific loop guidance; no private media is stored and no model weights are trained.
+- Added a versioned change record and rollback instructions.
+
 ## 2026-11-22 — AgentOS 0.3.4 video editor workflow
 
 - Added a dedicated video-editor.agent.md profile for compatible GitHub Copilot and VS Code workflows.
