@@ -10,6 +10,7 @@ AgentOS helps ChatGPT coordinate complex requests using reusable instructions, c
 - **A greeting-only skill** designed to keep a simple hello brief. For explicit routing, mention **@AgentOS**; ChatGPT still controls automatic skill selection.
 - **Workflow guidance** that maps multi-step work into dependencies, allows parallel steps when the host supports them, and uses bounded repair loops.
 - **Lifecycle hook definitions** for compatible runtimes. Hooks are advisory and do not replace host approval or security controls.
+- **Nine custom agent profiles** for GitHub Copilot and compatible VS Code workflows, stored in [.github/agents/](./.github/agents/). These profiles are separate from the ChatGPT plugin skills.
 
 ## Use with ChatGPT
 
@@ -20,6 +21,8 @@ AgentOS provides specialist role instructions; separate parallel agents are avai
 ## Repository layout
 
 The complete plugin package is in [agentos-plugin/](./agentos-plugin/), including its manifests, skills, hook definitions, and references. See the [package README](./agentos-plugin/README.md) for details.
+
+Repository custom agents are in [.github/agents/](./.github/agents/). See the [documentation index](./docs/README.md) for architecture, compatibility, workflows, and skill-to-agent mapping.
 
 ## Privacy and integrations
 

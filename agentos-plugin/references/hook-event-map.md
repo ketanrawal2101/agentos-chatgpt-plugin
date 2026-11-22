@@ -1,6 +1,6 @@
 # AgentOS Hook Event Map
 
-The hook manifest registers the supported Codex lifecycle event names below. Actual availability depends on the host and execution mode. The script emits static additional context for `SessionStart`, `UserPromptSubmit`, and `SubagentStart`; other events are registered but produce no output.
+The manifest registers 14 lifecycle events. Host support and execution depend on the active runtime. The hook script emits static additional context for five events: `SessionStart`, `UserPromptSubmit`, `PreToolUse`, `PostToolUse`, and `SubagentStart`. The remaining registered events are no-ops.
 
 | Event | AgentOS behavior | Data retained |
 |---|---|---|
@@ -17,4 +17,3 @@ The hook manifest registers the supported Codex lifecycle event names below. Act
 | `SessionEnd` | No-op observer; no session summary is saved | None |
 
 Hooks are advisory and must not be used as a permission boundary. The host's documented configuration and trust requirements control execution. ChatGPT web plugin installation does not deploy command scripts; supported ChatGPT Work/Codex environments can execute bundled plugin hooks when configured and trusted.
-
