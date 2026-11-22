@@ -30,6 +30,10 @@ When a node fails, inspect the actual result, compare it with the success predic
 
 Before retrying an uncertain external write, inspect whether it already succeeded. Stop on denied approval or missing authorization. Never retry indefinitely.
 
+## Media-specific acceptance checks
+
+For video nodes, include checks for the saved project, export dimensions and duration, representative opening/middle/ending visuals, voice source, audio-track alignment, captions, and final call to action. Preview generated inserts for malformed text or artifacts; verify they were placed in the intended scene. Recheck runtime after transitions or scene edits. Record unverified playback/export states and keep repairs within the existing per-node retry cap.
+
 ## State reference
 
 The detailed states and invariants are in [workflow-state-machine.md](../agentos-plugin/references/workflow-state-machine.md). In brief: plan, check preconditions, execute, observe, evaluate, repair if needed, then mark passed only when evidence meets the check.
