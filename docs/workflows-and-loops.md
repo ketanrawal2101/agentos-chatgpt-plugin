@@ -32,7 +32,7 @@ Before retrying an uncertain external write, inspect whether it already succeede
 
 ## Media-specific acceptance checks
 
-For video nodes, include checks for the saved project, export dimensions and duration, representative opening/middle/ending visuals, voice source, audio-track alignment, captions, and final call to action. Preview generated inserts for malformed text or artifacts; verify they were placed in the intended scene. Recheck runtime after transitions or scene edits. Record unverified playback/export states and keep repairs within the existing per-node retry cap.
+For educational video nodes, require audible explanations unless the user requests no narration. Check the saved project, export dimensions and duration, representative opening/middle/ending visuals, selected voice and avatar, audio-track alignment, captions, and spoken call to action. Preview generated inserts for malformed text or artifacts; verify they were placed in the intended scene. Recheck runtime after transitions or scene edits. Record unverified playback/export states and keep repairs within the existing per-node retry cap.
 
 ## State reference
 
