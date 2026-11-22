@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-11-22 — AgentOS 0.3.7 HeyGen route handling
+
+- Added a no-retry rule for plan-blocked routes and the 5,000-character direct-avatar script limit.
+- Kept the fallback conditional on meeting the user's requested outcome; B-roll requirements cannot be silently dropped.
+
 ## 2026-11-22 — AgentOS 0.3.6 narration-first video workflow
 
 - Made narration a default acceptance condition for educational videos and added HeyGen private avatar/voice preflight guidance.
