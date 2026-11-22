@@ -74,6 +74,15 @@ When adding a narration WAV to a generated video:
 
 This check is required because the clip selected in the timeline determines which track's Mute setting changes.
 
+## Google Vids educational motion lessons
+
+- Docs-to-video is a fast way to build a multi-scene lesson from a reviewed script. It may automatically add synthetic narration. If the user asked for a human voice, remove the generated narration from the working handoff and keep any music track only if it fits; mark the project voice-ready, not finished, until the user's human recording is added.
+- AI Video Clip outputs in this workflow were 10-second, 720p landscape clips. Use a consistent art direction and one concept per clip, then preview each result before insertion. Generated clips can contain pseudo-text or malformed glyphs even when the prompt excludes writing. Do not insert a clip with visible artifacts; keep a clean source diagram or use the app's built-in object animation instead.
+- To overlay motion within an existing lesson scene, select the target scene, preview the generated clip, and choose **Insert in current scene** from the insert menu. The main **Insert** action defaults to a new scene, so verify the scene count and timeline after each insertion.
+- Recheck timings after adding transitions: a 1.5-second dissolve shortens the total runtime and shifts later scenes. Recheck audio alignment after any scene or transition changes.
+- When adding a text preset from the Text panel, verify that the canvas text object and its timeline track are selected before typing. Pressing Enter while the preset panel still has focus can add a duplicate; double-click the canvas text to edit it, then check its position and contrast against the background.
+- For a teaching video, make the topic visible in the opening seconds, pair each question with its answer and a single matching visual idea, use restrained consistent transitions, and end with a specific study-resource callout. Keep employer questions framed as recurring preparation themes unless a current primary source confirms an exact question.
+
 ## Learning and privacy
 
 Capture only reusable, verified process lessons: tool selection, visible UI behavior, failure labels, and criteria. Do not store portraits, voice recordings, videos, private transcripts, credentials, or account identifiers. Skill improvements are process learning, not model training. Follow the user's explicit authorization and the supported versioned plugin update flow for durable changes.
