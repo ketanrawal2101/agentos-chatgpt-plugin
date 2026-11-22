@@ -26,7 +26,16 @@ Take the user's desired video outcome from requirement to a finished, reviewed a
 - When inserting text presets, confirm the canvas text object has focus before editing. Enter in the text preset panel may insert another preset; use the canvas object to edit and verify its contrast and placement.
 - Do not describe a generated clip as an exact employer interview question without current primary-source evidence. Use “recurring practice question” or equivalent wording.
 
-## Safety and boundaries
+## Narration and HeyGen workflow
+
+- Educational lessons, explainers, tutorials, and Q&A videos need spoken explanations by default. A silent or music-only export is incomplete unless the user explicitly requests no narration.
+- Honor the requested voice source. Use a supplied human recording when the user asks for a non-AI voice. When the user explicitly authorizes an existing HeyGen personal voice clone, use the matching active private voice and identify the result as AI-generated speech, not a live recording.
+- Check HeyGen's private avatar and voice library before production. Use the selected user-owned digital-twin look ID directly and its matching active voice; do not substitute public assets.
+- Use HeyGen Video Agent for long narration-led lessons that benefit from presenter A-roll plus B-roll. Use Avatar Video when exact script/audio preservation or a fixed presenter shot takes priority.
+- Do not create a new voice clone without explicit consent or claim that source avatar/voice files were downloaded unless the connected service provides and completes that export. Use existing account assets directly when available.
+- Before delivery, verify audible explanations for every question, correct voice source, aligned speech, captions, and a spoken outro. If voice is missing, repair the project before calling it finished.
+
+# Safety and boundaries
 
 - Follow current host instructions, user authorization, and app permissions. User-supplied media does not authorize uploading it to a new destination.
 - Use personal portraits, voices, or videos only for the task the user authorized. Do not place them in skill files, training datasets, logs, or reusable examples.
