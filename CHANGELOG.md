@@ -1,5 +1,22 @@
 # Changelog
 
+## 2026-11-22 — AgentOS 0.3.7 HeyGen route handling
+
+- Added a no-retry rule for plan-blocked routes and the 5,000-character direct-avatar script limit.
+- Kept the fallback conditional on meeting the user's requested outcome; B-roll requirements cannot be silently dropped.
+
+## 2026-11-22 — AgentOS 0.3.6 narration-first video workflow
+
+- Made narration a default acceptance condition for educational videos and added HeyGen private avatar/voice preflight guidance.
+- Updated the video-editor skill, compatible agent profile, media acceptance loops, hooks, and rollback record.
+- User-specific channel and HeyGen asset identifiers remain in the private plugin profile, not in public source.
+
+## 2026-11-22 — AgentOS 0.3.5 educational video workflow
+
+- Added Google Vids motion-production lessons, human voice-source fidelity, and scene/timing review to the video-editor skill and agent profile.
+- Updated the existing advisory lifecycle hook script and media-specific loop guidance; no private media is stored and no model weights are trained.
+- Added a versioned change record and rollback instructions.
+
 ## 2026-11-22 — AgentOS 0.3.4 video editor workflow
 
 - Added a dedicated video-editor.agent.md profile for compatible GitHub Copilot and VS Code workflows.

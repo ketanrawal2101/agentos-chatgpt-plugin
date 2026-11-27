@@ -51,6 +51,17 @@ Make this prompt an internal work product. Execute it rather than stopping to as
 - Use the target app's live controls and current project. Save an editable project, then export if requested or supported.
 - For any install, inspect the runtime, architecture, source, license, disk needs, and existing environment first. Prefer isolated installs and document each install with version, source, path, purpose, and uninstall steps.
 
+## Narration for educational videos
+
+- Treat spoken explanation as required by default for lessons, tutorials, explainers, and question-and-answer videos. A silent or music-only export is incomplete unless the user explicitly asks for no narration.
+- If a human/non-AI recording is requested, use the user's recording and do not substitute generated speech. If the user authorizes an existing HeyGen personal voice clone, use that account voice and label it as AI-generated speech in the handoff; do not describe it as a live human recording.
+- Check the connected HeyGen account for private avatars and voices. When the user asks for their own avatar, use the chosen user-owned avatar/look ID directly and prefer its matching active private voice. Do not substitute a public avatar or voice.
+- For long narration-led lessons where presenter plus B-roll is useful, use HeyGen Video Agent with the selected avatar ID. Use Avatar Video when exact script/audio preservation or a fixed presenter shot is the priority.
+- If HeyGen Video Agent is unavailable on the current plan or in the user's region, do not retry it. When a direct talking-avatar video meets the request, use Avatar Video; if B-roll is essential, report the route limitation instead of silently changing the deliverable.
+- HeyGen's direct Avatar Video script field currently has a 5,000-character limit. Keep narration within the live limit or split it into coherent segments; never retry an unchanged oversized script.
+- Do not create a new voice clone without explicit consent. Do not claim raw avatar/voice files were downloaded unless the connected service exposes and completes a source export. Use existing account assets directly when available.
+- Verify the render contains audible explanations for every section, the correct voice source, aligned speech, captions, and a spoken resource outro. If speech is absent, keep the item marked incomplete and repair it before calling the video finished.
+
 ## Observe, evaluate, repair
 
 Review the actual result, not only the prompt or a thumbnail:
@@ -74,9 +85,18 @@ When adding a narration WAV to a generated video:
 
 This check is required because the clip selected in the timeline determines which track's Mute setting changes.
 
+## Google Vids educational motion lessons
+
+- Docs-to-video is a fast way to build a multi-scene lesson from a reviewed script. It may automatically add synthetic narration. Keep an audible explanation for every teaching section. If the user asked for a human voice, remove generated narration and mark the project incomplete until the user's recording is added; do not deliver a silent/music-only video as finished.
+- AI Video Clip outputs in this workflow were 10-second, 720p landscape clips. Use a consistent art direction and one concept per clip, then preview each result before insertion. Generated clips can contain pseudo-text or malformed glyphs even when the prompt excludes writing. Do not insert a clip with visible artifacts; keep a clean source diagram or use the app's built-in object animation instead.
+- To overlay motion within an existing lesson scene, select the target scene, preview the generated clip, and choose **Insert in current scene** from the insert menu. The main **Insert** action defaults to a new scene, so verify the scene count and timeline after each insertion.
+- Recheck timings after adding transitions: a 1.5-second dissolve shortens the total runtime and shifts later scenes. Recheck audio alignment after any scene or transition changes.
+- When adding a text preset from the Text panel, verify that the canvas text object and its timeline track are selected before typing. Pressing Enter while the preset panel still has focus can add a duplicate; double-click the canvas text to edit it, then check its position and contrast against the background.
+- For a teaching video, make the topic visible in the opening seconds, pair each question with its answer and a single matching visual idea, use restrained consistent transitions, and end with a specific study-resource callout. Keep employer questions framed as recurring preparation themes unless a current primary source confirms an exact question.
+
 ## Learning and privacy
 
-Capture only reusable, verified process lessons: tool selection, visible UI behavior, failure labels, and criteria. Do not store portraits, voice recordings, videos, private transcripts, credentials, or account identifiers. Skill improvements are process learning, not model training. Follow the user's explicit authorization and the supported versioned plugin update flow for durable changes.
+Capture only reusable, verified process lessons: tool selection, visible UI behavior, failure labels, and criteria. Do not store portraits, voice recordings, videos, private transcripts, or credentials in skills. When the user explicitly asks for persistence, keep channel metadata and authorized private avatar/voice asset IDs in a separate private channel-profile file; do not copy them into public source repositories. Skill improvements are process learning, not model training. Follow the user's explicit authorization and the supported versioned plugin update flow for durable changes.
 
 ## Completion report
 

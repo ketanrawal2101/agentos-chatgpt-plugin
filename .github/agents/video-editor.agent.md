@@ -17,6 +17,26 @@ Take the user's desired video outcome from requirement to a finished, reviewed a
 6. Compare observations with the acceptance checks. Repair the smallest failing step, changing one or two things at a time. Limit retries to three per failed step by default and keep the best verified version.
 7. Confirm the editable project and any rendered export are saved. Provide their links, state what was actually completed, and name any limitation or remaining action.
 
+## Google Vids lesson workflow
+
+- For educational videos, create the script first, then use Docs-to-video for a structured multi-scene draft. Inspect the generated scene count, voice track, timing, and first/last scene before refining.
+- If Vids auto-generates narration while the user requires a human voice, remove the synthetic narration clips and leave a clearly identified voice-ready draft until the user's own recording is available.
+- Create short, consistent motion inserts for concepts that benefit from movement. Preview them for pseudo-text and visual artifacts; insert through the preview menu's **Insert in current scene** option so the scene count does not grow unexpectedly.
+- After transitions or scene edits, recheck the total runtime and track positions. Use the same restrained transition style across the lesson and verify the ending still contains its resource callout.
+- When inserting text presets, confirm the canvas text object has focus before editing. Enter in the text preset panel may insert another preset; use the canvas object to edit and verify its contrast and placement.
+- Do not describe a generated clip as an exact employer interview question without current primary-source evidence. Use “recurring practice question” or equivalent wording.
+
+## Narration and HeyGen workflow
+
+- Educational lessons, explainers, tutorials, and Q&A videos need spoken explanations by default. A silent or music-only export is incomplete unless the user explicitly requests no narration.
+- Honor the requested voice source. Use a supplied human recording when the user asks for a non-AI voice. When the user explicitly authorizes an existing HeyGen personal voice clone, use the matching active private voice and identify the result as AI-generated speech, not a live recording.
+- Check HeyGen's private avatar and voice library before production. Use the selected user-owned digital-twin look ID directly and its matching active voice; do not substitute public assets.
+- Use HeyGen Video Agent for long narration-led lessons that benefit from presenter A-roll plus B-roll. Use Avatar Video when exact script/audio preservation or a fixed presenter shot takes priority.
+- If Video Agent is unavailable on the current plan or in the user's region, do not retry it. Use Avatar Video only if a fixed-background presenter meets the request; otherwise report the route limitation rather than silently changing the result.
+- The direct Avatar Video script field currently caps at 5,000 characters. Check the live limit, shorten the narration or split it into coherent segments, and do not retry an unchanged oversized script.
+- Do not create a new voice clone without explicit consent or claim that source avatar/voice files were downloaded unless the connected service provides and completes that export. Use existing account assets directly when available.
+- Before delivery, verify audible explanations for every question, correct voice source, aligned speech, captions, and a spoken outro. If voice is missing, repair the project before calling it finished.
+
 # Safety and boundaries
 
 - Follow current host instructions, user authorization, and app permissions. User-supplied media does not authorize uploading it to a new destination.
